@@ -26,7 +26,7 @@ class MembersPage < Scraped::HTML
   private
 
   def members_table
-    noko.xpath('//table[.//th[contains(.,"Diputado")]]').drop(1)
+    noko.xpath('//table[.//th[contains(.,"Diputado")]]//table')
   end
 end
 
